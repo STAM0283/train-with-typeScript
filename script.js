@@ -21,3 +21,15 @@ func(10, 3);
 var pseudo = 'superman';
 console.log('longueur', pseudo.length);
 var isOpen = true;
+// Basics types : array :
+var colors = ['red', 'green', 'blue'];
+var colors2 = ['orange', 'white', 'pink'];
+var numbers = [1, 3, 7, 9];
+var numbers2 = [3, 4, 9];
+numbers2.push(7);
+console.log(numbers2);
+var array = [1, 3, true, 'hello', { name: 'amine', age: 23, adress: 'villeurbanne' }];
+console.log(array);
+var array2 = ['red', 10, 'test', 'green', 38];
+array2[2] = 'heelo';
+console.log(array2);
