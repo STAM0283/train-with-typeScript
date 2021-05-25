@@ -16,7 +16,8 @@ form.addEventListener('submit', (e) => {
     age.value = '';
   }
 });
-//Basics types : Number string and boolean 
+// 1) Basics types : Number string and boolean 
+
 const func = (num1: number, num2: number) => {
   console.log(num1 + num2);
 }
@@ -25,7 +26,8 @@ let pseudo: string = 'superman';
 console.log('longueur', pseudo.length);
 let isOpen: boolean = true;
 
-// Basics types : array :
+// 2) Basics types : array :
+
 let colors: string[] = ['red', 'green', 'blue'];
 let colors2: Array<string> = ['orange', 'white', 'pink'];
 let numbers: number[] = [1, 3, 7, 9];
@@ -38,7 +40,8 @@ let array2: (string | number)[] = ['red', 10, 'test', 'green', 38];
 array2[2] = 'heelo';
 console.log(array2); 
 
-// Basics types : Tuples here we specify the type of variable and the length
+// 3) Basics types : Tuples here we specify the type of variable and the length :
+
 let x: [string, number];
 x = ['hello', 3]; // correct 
 // x = [3, 'hello'] : error
@@ -57,10 +60,35 @@ const member2: {
 } = {
   level1: ['admin', 1]
 }
-// member2.level1[0] = 200;  Error : tuple.
+// member2.level1[0] = 200;  Error : tuple
+
 member2.level1[0] = 'moderator' // OK
 member2.level1.push('director'); // OK
 console.log(member2);  // ["moderator", 1, "director"]
+
+// 4) Basics types : Object :
+//A) Assignation :
+
+let car: {
+  color: string;
+  date: number;
+  speed: number;
+} = {
+  color: 'red',
+  date: 2020,
+  speed: 200
+}
+// B) Inference :
+let car2 = {
+  color: 'red',
+  date: 2020,
+  speed: 200
+}
+car.color = 'blue'; // OK
+// car.color = 20; error
+car.speed = 20; // OK
+console.log(car); // {color: "blue", date: 2020, speed: 20}
+
 
 
 
