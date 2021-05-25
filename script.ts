@@ -16,7 +16,7 @@ form.addEventListener('submit', (e) => {
     age.value = '';
   }
 });
-//Number string and boolean 
+//Basics types : Number string and boolean 
 const func = (num1: number, num2: number) => {
   console.log(num1 + num2);
 }
@@ -37,5 +37,33 @@ console.log(array);
 let array2: (string | number)[] = ['red', 10, 'test', 'green', 38];
 array2[2] = 'heelo';
 console.log(array2); 
+
+// Basics types : Tuples here we specify the type of variable and the length
+let x: [string, number];
+x = ['hello', 3]; // correct 
+// x = [3, 'hello'] : error
+// x = ['hello', 3, 4] : error 
+x.push(10, 'world'); // correct
+console.log(x); // ["hello", 3, 10, "world"]
+
+const member = {
+  level: ['admin', 1]
+}
+member.level[0] = 200; // OK
+console.log(member.level);
+
+const member2: {
+  level1: [string, number]
+} = {
+  level1: ['admin', 1]
+}
+// member2.level1[0] = 200;  Error : tuple.
+member2.level1[0] = 'moderator' // OK
+member2.level1.push('director'); // OK
+console.log(member2);  // ["moderator", 1, "director"]
+
+
+
+
 
 
