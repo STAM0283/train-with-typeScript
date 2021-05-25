@@ -103,6 +103,20 @@ let infos: (number | string | boolean)[] = [];
 infos.push('dupont', true, 40);
 console.log(infos) // ["dupont", true, 40]
 
+// Exercice 3 :
+let myNumber: {
+  firstName: string;
+  age: number;
+  isLoggedIn: boolean;
+}
+myNumber = {
+  firstName: 'Dupont',
+  age: 20,
+  isLoggedIn: true,
+}
+console.log(myNumber.age);
+
+
 
 
 

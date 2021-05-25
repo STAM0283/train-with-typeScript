@@ -81,3 +81,11 @@ console.log(myColor); // ["red"]
 var infos = [];
 infos.push('dupont', true, 40);
 console.log(infos); // ["dupont", true, 40]
+// Exercice 3 :
+var myNumber;
+myNumber = {
+    firstName: 'Dupont',
+    age: 20,
+    isLoggedIn: true
+};
+console.log(myNumber.age);
