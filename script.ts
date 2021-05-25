@@ -114,7 +114,16 @@ myNumber = {
   age: 20,
   isLoggedIn: true,
 }
-console.log(myNumber.age);
+console.log(myNumber.age); // 20
+
+// Exercice 4 :
+let number4 = {
+  firstName: 'Dupont',
+  age: 20,
+  isLoggedIn: true,
+}
+console.log(number4.age);
+
 
 
 
