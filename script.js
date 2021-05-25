@@ -69,3 +69,8 @@ car.color = 'blue'; // OK
 // car.color = 20; error
 car.speed = 20; // OK
 console.log(car); // {color: "blue", date: 2020, speed: 20}
+// Exercice 1 :
+var names;
+var speed = 25;
+var isLoading;
+var ages;

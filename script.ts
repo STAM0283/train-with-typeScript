@@ -89,6 +89,12 @@ car.color = 'blue'; // OK
 car.speed = 20; // OK
 console.log(car); // {color: "blue", date: 2020, speed: 20}
 
+// Exercice 1 :
+let names: string;
+let speed: number = 25;
+let isLoading: boolean;
+let ages: number | string;
+
 
 
 
