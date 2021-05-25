@@ -95,6 +95,14 @@ let speed: number = 25;
 let isLoading: boolean;
 let ages: number | string;
 
+// Exercice 2 : 
+let myColor: Array<string> = [] // OR let myColor = string[];
+myColor.push('red');
+console.log(myColor); // ["red"]
+let infos: (number | string | boolean)[] = [];
+infos.push('dupont', true, 40);
+console.log(infos) // ["dupont", true, 40]
+
 
 
 

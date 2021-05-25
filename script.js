@@ -74,3 +74,10 @@ var names;
 var speed = 25;
 var isLoading;
 var ages;
+// Exercice 2 : 
+var myColor = []; // OR let myColor = string[];
+myColor.push('red');
+console.log(myColor); // ["red"]
+var infos = [];
+infos.push('dupont', true, 40);
+console.log(infos); // ["dupont", true, 40]
