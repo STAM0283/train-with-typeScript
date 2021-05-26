@@ -89,6 +89,8 @@ car.color = 'blue'; // OK
 car.speed = 20; // OK
 console.log(car); // {color: "blue", date: 2020, speed: 20}
 
+// 5)  Review and exercices :
+
 // Exercice 1 :
 let names: string;
 let speed: number = 25;
@@ -130,6 +132,32 @@ myInfos[1] = 200; // OK
 // myInfos[1] = 'salut'; : Error
 myInfos.push('world');
 console.log(myInfos); // "hello", 200, "world"]
+
+// 6) Basics types : Enum :
+enum Level2 {
+    ADMIN, // default value = 0
+    MODERATOR, // default value = 1
+    SUPPORT, // default value = 2
+    USER_READ_ONLY, // default value = 3
+}
+const users = {
+  pseudo: 'Batman',
+  level2: Level2.SUPPORT
+}
+if(users.level2 === Level2.SUPPORT) {
+  console.log(`
+  Bienvenue ${users.pseudo}
+  Vous travaillez au service support
+  ${Level2.SUPPORT}
+  `);
+  
+}
+// Change the default values ​​of the enums
+enum MyLevel {
+  ADMIN = 100,
+  MODERATOR,
+  SUPPORT = 160,
+}
 
 
 

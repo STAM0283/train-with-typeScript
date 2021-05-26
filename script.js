@@ -69,6 +69,7 @@ car.color = 'blue'; // OK
 // car.color = 20; error
 car.speed = 20; // OK
 console.log(car); // {color: "blue", date: 2020, speed: 20}
+// 5)  Review and exercices :
 // Exercice 1 :
 var names;
 var speed = 25;
@@ -102,3 +103,25 @@ myInfos[1] = 200; // OK
 // myInfos[1] = 'salut'; : Error
 myInfos.push('world');
 console.log(myInfos); // "hello", 200, "world"]
+// 6) Basics types : Enum :
+var Level2;
+(function (Level2) {
+    Level2[Level2["ADMIN"] = 0] = "ADMIN";
+    Level2[Level2["MODERATOR"] = 1] = "MODERATOR";
+    Level2[Level2["SUPPORT"] = 2] = "SUPPORT";
+    Level2[Level2["USER_READ_ONLY"] = 3] = "USER_READ_ONLY";
+})(Level2 || (Level2 = {}));
+var users = {
+    pseudo: 'Batman',
+    level2: Level2.SUPPORT
+};
+if (users.level2 === Level2.SUPPORT) {
+    console.log("\n  Bienvenue " + users.pseudo + "\n  Vous travaillez au service support\n  " + Level2.SUPPORT + "\n  ");
+}
+// Change the default values ​​of the enums
+var MyLevel;
+(function (MyLevel) {
+    MyLevel[MyLevel["ADMIN"] = 100] = "ADMIN";
+    MyLevel[MyLevel["MODERATOR"] = 101] = "MODERATOR";
+    MyLevel[MyLevel["SUPPORT"] = 160] = "SUPPORT";
+})(MyLevel || (MyLevel = {}));
