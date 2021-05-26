@@ -95,4 +95,10 @@ var number4 = {
     age: 20,
     isLoggedIn: true
 };
-console.log(number4.age);
+console.log(number4.age); // 20
+// Exercice 5 :
+var myInfos = ['hello', 160]; // [160, 'hello] : Error
+myInfos[1] = 200; // OK
+// myInfos[1] = 'salut'; : Error
+myInfos.push('world');
+console.log(myInfos); // "hello", 200, "world"]
