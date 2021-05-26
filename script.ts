@@ -182,7 +182,7 @@ anyDataArray = ['world', true, 100, ['orange', 1], {age: 30}];
 anyDataArray.push('hello');
 console.log(anyDataArray, typeof anyDataArray); // ["world", true, 100, Array(2), {…}, "hello"] "object"
 
-// Basics types : unknown => any and unknow are very similar : 
+// 8)  Basics types : unknown => any and unknow are very similar : 
 // - With any :
 let data: any;
 data = true;
@@ -203,6 +203,19 @@ if(typeof data3 === 'number'){
   
 }
 console.log('2',typeof data4); // number
+
+// 9) Basics types : void => void is a little like the opposite of any:
+
+// 10) Functions types : 
+function gift3(num: number) {
+  return num + 3
+}
+let calculate: Function;
+calculate = gift3; // OK 
+console.log('calculate 1', calculate(20)); // 23
+// calculate = 'Hello'; error => you need a function
+console.log('calculate 1', calculate(20)); //
+let myAge: (num: number) => number;
 
 
 
