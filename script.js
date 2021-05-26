@@ -146,3 +146,23 @@ var anyDataArray = [];
 anyDataArray = ['world', true, 100, ['orange', 1], { age: 30 }];
 anyDataArray.push('hello');
 console.log(anyDataArray, typeof anyDataArray); // ["world", true, 100, Array(2), {…}, "hello"] "object"
+// Basics types : unknown => any and unknow are very similar : 
+// - With any :
+var data;
+data = true;
+console.log(typeof data); // boolean
+var data2;
+data2 = data; // OK and yet data is a bolean ! it's a flaw
+console.log(typeof data2); // boolean !
+// With unknow :
+var data3;
+data3 = 20;
+console.log(typeof data3); // boolean
+var data4;
+// data4 = data3; Error : Cannot assign type 'unknown' to type 'number
+// to use the unknown you need an extra check :
+if (typeof data3 === 'number') {
+    data4 = data3; // OK
+    console.log('1', typeof data4); // number
+}
+console.log('2', typeof data4); // number
