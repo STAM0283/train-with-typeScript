@@ -177,7 +177,7 @@ console.log('calculate 1', calculate(20)); // 23
 // calculate = 'Hello'; error => you need a function
 console.log('calculate 1', calculate(20)); //
 var myAge;
-// Functions types and parameters : 
+// 11) Functions types and parameters : 
 function buildName(firstName, lastName) {
     return firstName + ' ' + lastName;
 }
@@ -192,3 +192,19 @@ function buildName2(firstName, lastName) {
 }
 var result3 = buildName2('bob');
 console.log(result3); // bob
+// 12) Rest Parameters :
+var divColors = document.getElementById('colors');
+var favoritesColor = function (arg1, arg2, arg3, arg4) {
+    var h1 = document.createElement('h1');
+    h1.innerHTML = "Titre: " + arg1;
+    divColors.appendChild(h1);
+    var ul = document.createElement('ul');
+    for (var i in arguments) {
+        var li = document.createElement('li');
+        li.innerHTML = arguments[i];
+        ul.appendChild(li);
+    }
+    divColors.appendChild(ul);
+};
+favoritesColor('List 1', 'green', 'red', 'blue');
+favoritesColor('List 2', 'yellow', 'white', 'black');
