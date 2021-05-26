@@ -125,3 +125,24 @@ var MyLevel;
     MyLevel[MyLevel["MODERATOR"] = 101] = "MODERATOR";
     MyLevel[MyLevel["SUPPORT"] = 160] = "SUPPORT";
 })(MyLevel || (MyLevel = {}));
+var admin1 = MyLevel[101];
+console.log('data1', admin1); // MODERATOR
+admin1 = MyLevel[160];
+console.log('data2', admin1); // SUPPORT
+// 7) Basics types :  Any : it is the most flexible type, it does not impose any type
+var myData = 'hello world';
+console.log(myData + ' ' + typeof myData); // hello world string
+myData = 20;
+console.log(myData + ' ' + typeof myData); // 20 number
+myData = true;
+console.log(myData + ' ' + typeof myData); // true boolean
+myData = [1, 2, 'hello'];
+console.log(myData + ' ' + typeof myData); // 1,2,hello object
+myData = {
+    myColors: ['red', 'green', 'blue']
+};
+console.log(myData.myColors + ' ' + typeof myData); // red,green,blue object
+var anyDataArray = [];
+anyDataArray = ['world', true, 100, ['orange', 1], { age: 30 }];
+anyDataArray.push('hello');
+console.log(anyDataArray, typeof anyDataArray); // ["world", true, 100, Array(2), {…}, "hello"] "object"
