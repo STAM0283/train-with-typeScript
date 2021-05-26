@@ -168,12 +168,27 @@ if (typeof data3 === 'number') {
 console.log('2', typeof data4); // number
 // 9) Basics types : void => void is a little like the opposite of any:
 // 10) Functions types : 
-function gift3(num) {
+function test(num) {
     return num + 3;
 }
 var calculate;
-calculate = gift3; // OK 
+calculate = test; // OK 
 console.log('calculate 1', calculate(20)); // 23
 // calculate = 'Hello'; error => you need a function
 console.log('calculate 1', calculate(20)); //
 var myAge;
+// Functions types and parameters : 
+function buildName(firstName, lastName) {
+    return firstName + ' ' + lastName;
+}
+var result = buildName('bob'); // Error, an argument is missing
+console.log(result); // bob undefined
+var result2 = buildName('bob', 'adams', 'lilia'); // Error,  there is one more argument
+function buildName2(firstName, lastName) {
+    if (lastName)
+        return firstName + ' ' + lastName;
+    else
+        return firstName;
+}
+var result3 = buildName2('bob');
+console.log(result3); // bob
