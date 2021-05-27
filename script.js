@@ -193,6 +193,7 @@ function buildName2(firstName, lastName) {
 var result3 = buildName2('bob');
 console.log(result3); // bob
 // 12) Rest Parameters :
+// A) without Rest Parameters
 var divColors = document.getElementById('colors');
 var favoritesColor = function (arg1, arg2, arg3, arg4) {
     var h1 = document.createElement('h1');
@@ -208,3 +209,25 @@ var favoritesColor = function (arg1, arg2, arg3, arg4) {
 };
 favoritesColor('List 1', 'green', 'red', 'blue');
 favoritesColor('List 2', 'yellow', 'white', 'black');
+// B) with Rest Parameters :
+var divColors2 = document.getElementById('colors2');
+var favoritesColor2 = function (argument1) {
+    var restOfColors = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        restOfColors[_i - 1] = arguments[_i];
+    }
+    var h1 = document.createElement('h1');
+    h1.innerHTML = "Titre: " + argument1;
+    divColors2.appendChild(h1);
+    var ul = document.createElement('ul');
+    for (var i in restOfColors) {
+        var li = document.createElement('li');
+        li.innerHTML = restOfColors[i];
+        ul.appendChild(li);
+    }
+    divColors2.appendChild(ul);
+};
+favoritesColor2('List 1', 'green', 'red', 'blue', 'pink');
+favoritesColor2('List 2', 'yellow', 'white', 'black');
+// another exemple :
+var buildNameFun = buildName;

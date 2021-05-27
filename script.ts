@@ -233,6 +233,7 @@ let result3 = buildName2('bob');
 console.log(result3); // bob
 
 // 12) Rest Parameters :
+// A) without Rest Parameters
 const divColors = document.getElementById('colors');
 let favoritesColor = function(arg1: string, arg2: string, arg3: string, arg4: string) {
   const h1 = document.createElement('h1');
@@ -249,6 +250,28 @@ let favoritesColor = function(arg1: string, arg2: string, arg3: string, arg4: st
 }
 favoritesColor('List 1', 'green', 'red', 'blue');
 favoritesColor('List 2', 'yellow', 'white', 'black');
+
+// B) with Rest Parameters :
+const divColors2 = document.getElementById('colors2');
+let favoritesColor2 = function(argument1: string, ...restOfColors: string[]) {
+  const h1 = document.createElement('h1');
+  
+  h1.innerHTML = `Titre: ${argument1}`;
+  divColors2.appendChild(h1);
+  const ul = document.createElement('ul');
+  for(let i in restOfColors) {
+    let li = document.createElement('li');
+    li.innerHTML = restOfColors[i];
+    ul.appendChild(li);
+    
+  }
+  divColors2.appendChild(ul);
+}
+favoritesColor2('List 1', 'green', 'red', 'blue', 'pink');
+favoritesColor2('List 2', 'yellow', 'white', 'black');
+// another exemple :
+let buildNameFun: (fname: string, ...rest: string[]) => string = buildName;
+
 
 
 
