@@ -267,4 +267,10 @@ function concatenate(arg1, arg2) {
 }
 console.log(concatenate(10, 20)); // 30 (number)
 console.log(concatenate('hello', 20)); // hello20
-// 15) Types Aliases :
+var dataTest;
+dataTest = 'hello'; // OK
+// datatest = false; Error TS;
+var welcome = function (usename) {
+    console.log('Bienvenue', usename);
+};
+welcome('adams');

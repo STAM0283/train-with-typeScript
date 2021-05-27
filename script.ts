@@ -313,6 +313,15 @@ console.log(concatenate('hello', 20)); // hello20
 
 // 15) Types Aliases :
 
+type NumStr = number | string;
+let dataTest: NumStr;
+dataTest = 'hello'; // OK
+// datatest = false; Error TS;
+const welcome = (usename: NumStr) => {
+  console.log('Bienvenue', usename);
+}
+welcome('adams');
+
 
 
 
