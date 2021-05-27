@@ -272,6 +272,15 @@ favoritesColor2('List 2', 'yellow', 'white', 'black');
 // another exemple :
 let buildNameFun: (fname: string, ...rest: string[]) => string = buildName;
 
+// 13) Callback Function Type :
+function ageMember(age: number, sum: (arg: number) => void) {
+  const memberAge = age + 4;
+  sum(memberAge);
+}
+ageMember(40, (num) => console.log(num)); // 44
+// 14) Union Types : 
+// 15) Types Aliases :
+
 
 
 

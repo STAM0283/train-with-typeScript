@@ -231,3 +231,11 @@ favoritesColor2('List 1', 'green', 'red', 'blue', 'pink');
 favoritesColor2('List 2', 'yellow', 'white', 'black');
 // another exemple :
 var buildNameFun = buildName;
+// 13) Callback Function Type :
+function ageMember(age, sum) {
+    var memberAge = age + 4;
+    sum(memberAge);
+}
+ageMember(40, function (num) { return console.log(num); }); // 44
+// 14) Union Types : 
+// 15) Types Aliases :
