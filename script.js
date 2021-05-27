@@ -238,4 +238,33 @@ function ageMember(age, sum) {
 }
 ageMember(40, function (num) { return console.log(num); }); // 44
 // 14) Union Types : 
+var myInformations = 'Roger';
+myInformations = 'adams'; // OK
+myInformations = 20; // OK
+myInformations = true; // OK
+// myInformations = ['admas', 20] Error
+var myNames = [];
+// myNames = 'Bob' Error
+myNames = ['Bob']; // OK
+function sum(arg1, arg2) {
+    return arg1 + arg2;
+}
+console.log(sum(20, 40)); // OK = 60;
+// console.log(sum('hello', 40)); TS ERROR , JS OK
+// Solution :
+function concatenate(arg1, arg2) {
+    var result;
+    if (typeof arg1 === 'number' && typeof arg2 === 'number') {
+        result = arg1 + arg2; // number 30
+    }
+    else if (typeof arg1 === 'string' && typeof arg2 === 'string') {
+        result = arg1 + arg2; // string
+    }
+    else {
+        result = arg1.toString() + arg2.toString(); // string
+    }
+    return result;
+}
+console.log(concatenate(10, 20)); // 30 (number)
+console.log(concatenate('hello', 20)); // hello20
 // 15) Types Aliases :
