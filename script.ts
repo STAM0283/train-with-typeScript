@@ -322,6 +322,16 @@ const welcome = (usename: NumStr) => {
 }
 welcome('adams');
 
+// 16) Literal Type : 
+
+let PI3: 3.14;
+let directorName: 'adams';
+let numberTest: 2 | 6;
+numberTest = 2; // OK
+numberTest = 6; // OK
+//numberTest = 8 Error TS
+// PI3 = 4 // Error , we can't change a value. 
+
 
 
 

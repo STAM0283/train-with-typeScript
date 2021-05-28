@@ -274,3 +274,11 @@ var welcome = function (usename) {
     console.log('Bienvenue', usename);
 };
 welcome('adams');
+// 16) Literal Type : 
+var PI3;
+var directorName;
+var numberTest;
+numberTest = 2; // OK
+numberTest = 6; // OK
+//numberTest = 8 Error TS
+// PI3 = 4 // Error , we can't change a value. 
